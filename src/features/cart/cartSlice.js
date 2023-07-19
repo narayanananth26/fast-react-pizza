@@ -45,6 +45,8 @@ export const {
 export default cartSlice.reducer;
 
 // ! NOT SUITABLE FOR LARGER APPLICATIONS (USE REDUX'S RESELECT LIBRARY)
+export const getCart = (state) => state.cart.cart;
+
 export const getTotalCartQuantity = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
 
